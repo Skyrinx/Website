@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+        <img src="images/Logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times-circle" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-ellipsis-v" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p>Student and Artist</p>
+        <h1>Hello!, I'm <span>Skye Dingle</span></h1>
+    </div>
+    </div>
+</div>
+
+<!---------ABOUT--------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/pfp3.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Skye Dingle, a former media arts student who is currently an IT student.
+                    My skills in photography and editing are self-taught and a
+                    product of a curious mind. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Photography</span></li>
+                        <li><span>Film making</span></li>
+                        <li><span>DoP/Director of Photography</span></li>
+                        <li><span>Graphics Editing</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - 2022</span><br>Immersion at wazzup.ph production</li>
+                        <li><span>2021 - 2022</span><br>Graphics Designer at Twist TV</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Senior High School</span><br>Eugenio M. Lopez jr. Center for Media Arts SHS</li>
+                        <li><span>College</span><br>BS Information Technology - MI at National University Fairview</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------portfolio----------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.jpg">
+                <div class="layer">
+                    <h3>Burst of colors</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpg">
+                <div class="layer">
+                    <h3>Sunflower</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h3>Kavouge</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-4.jpg">
+                <div class="layer">
+                    <h3>when yellow meets blue</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-5.jpg">
+                <div class="layer">
+                    <h3>bookworm</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-6.jpg">
+                <div class="layer">
+                    <h3>heterochromia cat</h3>
+                    <p> Camera Used: Canon EOS 200D Mark II</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!--------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-envelope"></i> Skye.dingle11@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Skye.waynee"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.behance.net/skyedingle"><i class="fab fa-behance-square"></i></a>
+                    <a href="https://www.instagram.com/skyernx/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Skye Dingle </p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
